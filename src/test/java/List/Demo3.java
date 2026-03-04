@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class Demo3 {
 
     @Test
-    public void reverseString()
+    public void reverseString1()
     {
         String str="Nikhil";
         String temp="";
