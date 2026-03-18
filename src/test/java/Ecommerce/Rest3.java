@@ -4,9 +4,11 @@ import PoJo.Api;
 import PoJo.Course;
 import PoJo.WebAutomation;
 import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -18,6 +20,11 @@ String token;
     @Test
     public void postToken ()
     {
+        List<String> Expectedcoursetitles= new ArrayList<>();
+        Expectedcoursetitles.add("Selenium Webdriver Java");
+        Expectedcoursetitles.add("Cypress");
+        Expectedcoursetitles.add("Protractor");
+
         int total=0;
        String response =given().formParam("client_id" , "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com").
                 formParam("client_secret","erZOWM9g3UtwNRj340YYaK_W" )
@@ -57,6 +64,11 @@ String token;
              }
              System.out.println("The total price="+total);
 
-
+             List<String> actulTitle=new ArrayList<>();
+        for (int i=0;i<webAuto.size();i++) {
+            String title = webAuto.get(i).getCourseTitle();
+            actulTitle.add(title);
+        }
+        Assert.assertTrue(actulTitle.containsAll(Expectedcoursetitles));
     }
 }

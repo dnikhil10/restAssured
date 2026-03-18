@@ -38,5 +38,6 @@ public class Practice {
         System.out.println("Test");
         Reporter.log("hello" , true);
         Reporter.log("Hii" , false);
+        Reporter.log("Hii" , true);
     }
 }
