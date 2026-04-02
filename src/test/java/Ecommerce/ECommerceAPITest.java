@@ -52,6 +52,7 @@ public class ECommerceAPITest {
        JsonPath js=new JsonPath(addResponse);
        String productId=js.get("productId");
        System.out.println(productId);
+      System.out.println("Tested");
    }
 }
 
