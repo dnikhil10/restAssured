@@ -24,7 +24,11 @@ public class Demo4 {
 
        // m.entrySet().stream().filter(name->name.getValue()==1).forEach(System.out::println);
 
+
         System.out.println("Hello");
+
+        System.out.println("tested");
+
 
         for (Map.Entry<Character , Integer> entry:m.entrySet())
         {
