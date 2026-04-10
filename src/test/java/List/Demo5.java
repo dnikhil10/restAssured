@@ -49,7 +49,11 @@ public class Demo5 {
             if (count > 1) {
 
 
+
                 System.out.println(arr[i] + " appears " + count + "times");
+
+                //System.out.println(arr[i] + " appears " + count + " Times");
+
 
 
             }
