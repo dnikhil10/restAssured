@@ -17,6 +17,7 @@ public class Master
         {
             driver=new ChromeDriver();
             driver.manage().window().maximize();
+            System.out.println("Testing and devloping");
         }
     }
     @AfterTest
