@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 public class Master
 {
     public static WebDriver driver;
+
     @BeforeTest
     public void setUp()
     {
