@@ -16,7 +16,7 @@ public class Rest2 {
                 .when().get("/api/productsList").
                 then().assertThat().statusCode(200).extract().response().asString();
 
-        //System.out.println(response);
+        System.out.println(response);
 
         JsonPath js=new JsonPath(response);
         int responseCode=js.getInt("responseCode");
